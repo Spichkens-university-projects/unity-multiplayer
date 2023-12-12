@@ -1,7 +1,18 @@
-﻿namespace Source.Scripts.Managers
+﻿using Source.Scripts.Core;
+using Source.Scripts.Gamemodes;
+using UnityEngine;
+
+namespace Source.Scripts.Managers
 {
-    public class GameManager
+    public class GameManager : MonoSingleton<GameManager>
     {
-        
+        public IGameMode CurrentGamemode { get; set; }
+
+        public void StartGame(IGameMode gameMode)
+        {
+            CurrentGamemode = gameMode;
+            CurrentGamemode.OnGameStart();
+        }
+
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace Source.Scripts.UI.Button
 {
-    public class ButtonHoverController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private TMP_Text buttonText;
 
