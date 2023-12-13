@@ -1,13 +1,12 @@
-﻿using UnityEngine;
+﻿using UnityEngine.SceneManagement;
 
 namespace Source.Scripts.Gamemodes
 {
-    public class SplitscreenGameMode : GameModeBase, IGameMode
+    public class SplitscreenGameMode : IGameMode
     {
-        public new void OnGameStart()
+        public void Initialize()
         {
-            base.OnGameStart();
-            Debug.Log("Splitscreen mode started");
+            SceneManager.LoadScene("Gameplay");
         }
     }
 }

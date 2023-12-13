@@ -2,12 +2,11 @@
 
 namespace Source.Scripts.Gamemodes
 {
-    public class MultiplayerGameMode : GameModeBase, IGameMode
+    public class MultiplayerGameMode : IGameMode
     {
-        public new void OnGameStart()
+        public void Initialize()
         {
-            base.OnGameStart();
-            Debug.Log("Multiplayer mode started");
+            Debug.Log("Multi");
         }
     }
 }

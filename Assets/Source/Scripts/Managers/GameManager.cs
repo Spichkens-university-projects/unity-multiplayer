@@ -1,6 +1,5 @@
 ﻿using Source.Scripts.Core;
 using Source.Scripts.Gamemodes;
-using UnityEngine;
 
 namespace Source.Scripts.Managers
 {
@@ -11,7 +10,7 @@ namespace Source.Scripts.Managers
         public void StartGame(IGameMode gameMode)
         {
             CurrentGamemode = gameMode;
-            CurrentGamemode.OnGameStart();
+            CurrentGamemode.Initialize();
         }
 
     }
